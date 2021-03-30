@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>欧阳松的博客</title>
+  
+  <subtitle>Quick Notes</subtitle>
+  <link href="https://www.ouyangsong.com/atom.xml" rel="self"/>
+  
+  <link href="https://www.ouyangsong.com/"/>
+  <updated>2021-03-30T13:20:45.552Z</updated>
+  <id>https://www.ouyangsong.com/</id>
+  
+  <author>
+    <name>欧阳松</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac 退出与卸载 GlobalProtect</title>
+    <link href="https://www.ouyangsong.com/posts/40074/"/>
+    <id>https://www.ouyangsong.com/posts/40074/</id>
+    <published>2020-03-07T05:40:32.000Z</published>
+    <updated>2021-03-30T13:20:45.552Z</updated>
+    
+    <content type="html"><![CDATA[<p>北邮的校园 VPN 软件是 GlobalProtect。在 macOS 操作系统上，GlobalProtect 程序不提供常规的退出选项，不仅安装启动后无法退出，而且开机自启动。借助 macOS 自带的服务管理工具 launchctl 既可以退出 GlobalProtect 程序，也可以选择关闭程序开机自启。</p><span id="more"></span><p>GlobalProtect 的流氓之处在于：即使从活动监视器中强制杀进程，相关的进程也会立马重新自启动。常驻的进程不仅浪费系统资源，还有可能后台上传个人隐私。打开系统自带的终端应用，输入下面的命令进行管理 GlobalProtect 程序。</p><h2 id="退出">退出</h2><p>退出 GlobalProtect 程序，并不卸载软件。开机自启动任务仍然存在，所以下次开机时 GlobalProtect 程序会自启动。</p><figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">launchctl unload /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*</span><br></pre></td></tr></table></figure><p>如果不需要开机自启动，可以加上 w 参数去除开机自启。</p><figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">launchctl unload -w /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*</span><br></pre></td></tr></table></figure><h2 id="启动">启动</h2><p>使用上面命令退出了 GlobalProtect 进程，如果需要再次启动，可以执行下面命令。</p><figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*</span><br></pre></td></tr></table></figure><p>同样的，如果需要开启自启动功能，加上 w 参数即可。</p><figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">launchctl load -w /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*</span><br></pre></td></tr></table></figure><h2 id="卸载">卸载</h2><p><strong>方法一</strong><br>假如 GlobalProtect 的安装程序还存在，可以重新打开安装程序，取消升级操作，并且勾选卸载操作。</p><img src="//sf6-ttcdn-tos.pstatp.com/obj/mosaic-legacy/137b000025fa7bad27111" class="" title="使用安装程序卸载 GlobalProtect" alt="卸载 GlobalProtect"><p><strong>方法二</strong><br>假如 GlobalProtect 的安装程序已经丢失，可以执行应用目录中的卸载脚本。如果提示需要密码，输入锁屏密码即可。</p><figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /Applications/GlobalProtect.app/Contents/Resources/uninstall_gp.sh</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;北邮的校园 VPN 软件是 GlobalProtect。在 macOS 操作系统上，GlobalProtect 程序不提供常规的退出选项，不仅安装启动后无法退出，而且开机自启动。借助 macOS 自带的服务管理工具 launchctl 既可以退出 GlobalProtect 程序，也可以选择关闭程序开机自启。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="软件技巧" scheme="https://www.ouyangsong.com/categories/software-tips/"/>
+    
+    
+  </entry>
+  
+</feed>
