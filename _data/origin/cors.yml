@@ -1,54 +1,45 @@
 # Resource Hints
 resource_hints:
-  - url: https://fonts.googleapis.com
-    links:
-      - rel: preconnect
-      - rel: dns-prefetch
-  - url: https://fonts.gstatic.com
-    links:
-      - rel: preconnect
-        opts: [crossorigin]
-      - rel: dns-prefetch
-  - url: https://cdn.jsdelivr.net
+  - url: https://registry.npmmirror.com
     links:
       - rel: preconnect
       - rel: dns-prefetch
 
 # Web Fonts
-webfonts: https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap
+webfonts: /assets/lib/fonts/main.css
 
 # Libraries
 
 toc:
-  css: https://cdn.jsdelivr.net/npm/tocbot@4.29.0/dist/tocbot.min.css
-  js: https://cdn.jsdelivr.net/npm/tocbot@4.29.0/dist/tocbot.min.js
+  css: https://registry.npmmirror.com/tocbot/4.29.0/files/dist/tocbot.css
+  js: https://registry.npmmirror.com/tocbot/4.29.0/files/dist/tocbot.min.js
 
 fontawesome:
-  css: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css
+  css: https://registry.npmmirror.com/@fortawesome/fontawesome-free/6.6.0/files/css/all.min.css
 
 search:
-  js: https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js
+  js: https://registry.npmmirror.com/simple-jekyll-search/1.10.0/files/dest/simple-jekyll-search.min.js
 
 mermaid:
-  js: https://cdn.jsdelivr.net/npm/mermaid@11.0.2/dist/mermaid.min.js
+  js: https://registry.npmmirror.com/mermaid/11.0.2/files/dist/mermaid.min.js
 
 dayjs:
   js:
-    common: https://cdn.jsdelivr.net/npm/dayjs@1.11.13/dayjs.min.js
-    locale: https://cdn.jsdelivr.net/npm/dayjs@1.11.13/locale/:LOCALE.js
-    relativeTime: https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/relativeTime.js
-    localizedFormat: https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/localizedFormat.js
+    common: https://registry.npmmirror.com/dayjs/1.11.13/files/dayjs.min.js
+    locale: https://registry.npmmirror.com/dayjs/1.11.13/files/locale/zh.js
+    relativeTime: https://registry.npmmirror.com/dayjs/1.11.13/files/plugin/relativeTime.js
+    localizedFormat: https://registry.npmmirror.com/dayjs/1.11.13/files/plugin/localizedFormat.js
 
 glightbox:
-  css: https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css
-  js: https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/js/glightbox.min.js
+  css: https://registry.npmmirror.com/glightbox/3.3.0/files/dist/css/glightbox.min.css
+  js: https://registry.npmmirror.com/glightbox/3.3.0/files/dist/js/glightbox.min.js
 
 lazy-polyfill:
-  css: https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css
-  js: https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js
+  css: https://registry.npmmirror.com/loading-attribute-polyfill/2.1.1/files/dist/loading-attribute-polyfill.css
+  js: https://registry.npmmirror.com/loading-attribute-polyfill/2.1.1/files/dist/loading-attribute-polyfill.umd.js
 
 clipboard:
-  js: https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js
+  js: https://registry.npmmirror.com/clipboard/2.0.11/files/dist/clipboard.min.js
 
 mathjax:
-  js: https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js
+  js: https://registry.npmmirror.com/mathjax/3.2.2/files/es5/tex-chtml.js
